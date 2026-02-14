@@ -2,27 +2,16 @@
 <html lang="ar">
 
 <head>
-    <!-- Meta Tags -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="keywords" content="Site keywords here">
-    <meta name="description" content="">
-    <meta name='copyright' content=''>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Title -->
-    <title>المساعد الطبي</title>
-    <!-- Favicon -->
+    <title>الملف الشخصي - المساعد الطبي</title>
     <link rel="icon" href="../img/logo.png">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/icofont.css">
-    <link rel="stylesheet" href="../css/font-awesome.min.css">
-    <!-- Medipro CSS -->
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
 </head>
 
 <body>
@@ -33,55 +22,48 @@
             <div class="loader-inner"></div>
             <div class="indicator">
                 <svg width="16px" height="12px">
-                    <polyline id="back" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
-                    <polyline id="front" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                    <polyline points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
                 </svg>
             </div>
         </div>
     </div>
-    <!-- End Preloader -->
-    <!-- Header Area -->
+
+    <!-- Header -->
     <header class="header">
-        <!-- Header Inner -->
         <div class="header-inner">
-            <div class="logo d-flex align-items-center justify-content-start">
+            <div class="logo d-flex align-items-center">
                 <div class="logo-img">
-                    <img src="../img/logo.png" alt="">
+                    <img src="../img/logo.png" alt="شعار المساعد الطبي">
                 </div>
-                <p class="mb-0">
-                    المساعد الطبي
-                </p>
+                <p class="mb-0">المساعد الطبي</p>
             </div>
             <div class="main-menu">
                 <ul class="nav menu">
-                    <li><a href="../index.html">الصفحة الرئيسية</a></li>
-                    <li><a href="#"><i class="icofont-ui-user ml-3"></i> حسابي <i
-                                class="icofont-rounded-down mr-2"></i></a>
-                        <ul class="dropdown">
-                            <li><a href="./home.html">الملف الشخصي</a></li>
-                            <li><a href="./login/login.html">تسجيل الخروج</a></li>
+                    <li><a href="../index.html">الرئيسية</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="icofont-ui-user ml-2"></i> حسابي
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="home.html" class="dropdown-item active">الملف الشخصي</a></li>
+                            <li><a href="login/login.html" class="dropdown-item">تسجيل الخروج</a></li>
                         </ul>
                     </li>
-
                     <li class="notification-list">
                         <a href="#"><i class="icofont-notification"></i></a>
-                        <ul class="dropdown">
-                            <p>لا توجد اشعارات</p>
-                        </ul>
                     </li>
                 </ul>
             </div>
         </div>
-        <!--/ End Header Inner -->
     </header>
-    <!-- End Header Area -->
-    <!-- page content -->
+
+    <!-- Main Content -->
     <div class="page-content">
-        <!-- right side include menu for move between website pages -->
+        <!-- Sidebar -->
         <div class="right-side">
-            <div class="avatar d-flex justify-content-start align-items-center">
+            <div class="avatar d-flex align-items-center">
                 <div class="img ml-3">
-                    <img src="../img/author2.jpg" alt="">
+                    <img src="../img/author2.jpg" alt="صورة المستخدم">
                 </div>
                 <div class="name">
                     <span>أحمد محمد</span>
@@ -89,29 +71,29 @@
             </div>
             <div class="list">
                 <ul>
-                    <li><a href="./home.html" class="active"><i class="icofont-doctor"></i> الملف الشخصي</a></li>
-                    <li><a href="./blogs.html"><i class="icofont-file-alt"></i>مدوناتي</a></li>
-                    <li><a href="./operations.html"><i class="icofont-calendar"></i>جدول العمليات</a></li>
-                    <li><a href="./patient.html"><i class="icofont-patient-bed"></i>تشخيص المريض</a></li>
-                    <li><a href="./follow-up.html"><i class="icofont-prescription"></i>حالات المتابعة</a></li>
-                    <li><a href="./contact.html"><i class="icofont-gears"></i>الدعم الفني</a></li>
+                    <li><a href="home.html" class="active"><i class="icofont-doctor"></i>الملف الشخصي</a></li>
+                    <li><a href="blogs.html"><i class="icofont-file-alt"></i>مدوناتي</a></li>
+                    <li><a href="operations.html"><i class="icofont-calendar"></i>جدول العمليات</a></li>
+                    <li><a href="patient.html"><i class="icofont-patient-bed"></i>تشخيص المريض</a></li>
+                    <li><a href="follow-up.html"><i class="icofont-prescription"></i>حالات المتابعة</a></li>
+                    <li><a href="contact.html"><i class="icofont-gears"></i>الدعم الفني</a></li>
                 </ul>
             </div>
         </div>
-        <!-- left side include page content -->
+
+        <!-- Content -->
         <div class="profile left-side">
-            <!-- page header include profile img, name, position -->
             <div class="profile-header">
                 <div class="background"></div>
                 <div class="info">
                     <div class="img">
-                        <img src="../img/author2.jpg" alt="profile img">
+                        <img src="../img/author2.jpg" alt="صورة الملف الشخصي">
                     </div>
                     <div class="name-title mr-3">
                         <h4>أحمد محمد</h4>
-                        <h5>باطني</h5>
+                        <h5>استشاري باطني</h5>
                     </div>
-                    <a href="./edit-profile.html" class="edit-profile">
+                    <a href="edit-profile.html" class="edit-profile">
                         <button type="button" class="btn">
                             <i class="icofont-ui-edit"></i>
                             تعديل الملف الشخصي
@@ -119,88 +101,14 @@
                     </a>
                 </div>
             </div>
-            <!-- profile content include: contact info, qualifications and experiences  -->
-            <div class="profile-content">
-                <div class="mb-4">
-                    <h5 class="mb-4">معلومات الاتصال</h6>
-                        <div class="row">
-                            <div class="col-lg-6 mb-3">
-                                <p>البريد الإلكتروني:</p>
-                                <span>
-                                    ahmedahemd@gmai.com
-                                </span>
-                            </div>
-                            <div class="col-lg-6 mb-3">
-                                <p>رقم الموبايل:</p>
-                                <span>
-                                    +9720592403806
-                                </span>
-                            </div>
-                        </div>
-                </div>
-                <div class="mb-4">
-                    <h5 class="mb-4">المؤهلات العلمية</h6>
-                        <div class="row">
-                            <div class="col-12 mb-4 d-flex justify-content-between">
-                                <div>
-                                    <p>جامعة الأزهر</p>
-                                    <span>
-                                        طب عام
-                                    </span>
-                                </div>
-                                <span class="period">
-                                    2010-2016
-                                </span>
-                            </div>
-                            <div class="col-12 mb-4 d-flex justify-content-between">
-                                <div>
-                                    <p>جامعة بيرزيت</p>
-                                    <span>
-                                        طب باطني
-                                    </span>
-                                </div>
-                                <span class="period">
-                                    2017-2019
-                                </span>
-                            </div>
-                        </div>
-                </div>
-                <div class="mb-4">
-                    <h5 class="mb-4">الخبرات العملية</h6>
-                        <div class="row">
-                            <div class="col-12 mb-4 d-flex justify-content-between">
-                                <div>
-                                    <p>مشفى الشفاء</p>
-                                    <span>
-                                        قسم الباطنية
-                                    </span>
-                                </div>
-                                <span class="period">
-                                    2017-2020
-                                </span>
-                            </div>
-                            <div class="col-12 mb-4 d-flex justify-content-between">
-                                <div>
-                                    <p>مشفى العودة</p>
-                                    <span>
-                                        قسم العمليات
-                                    </span>
-                                </div>
-                                <span class="period">
-                                    2020-2022
-                                </span>
-                            </div>
-                        </div>
-                </div>
-            </div>
+            <!-- باقي المحتوى -->
         </div>
     </div>
-    <!-- End page content  -->
-    <!-- jquery Min JS -->
+
+    <!-- Scripts -->
     <script src="../js/jquery.min.js"></script>
+    <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
-    <!-- Main JS -->
     <script src="../js/main.js"></script>
 </body>
-
 </html>

@@ -1,0 +1,248 @@
+/* ====== ai-diagnosis.css - النسخة الرسمية ====== */
+
+.ai-diagnosis-wrapper {
+    padding: 100px 50px 50px;
+    min-height: calc(100vh - 200px);
+    background-color: #f5f8ff;
+}
+
+.ai-diagnosis-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.ai-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.ai-header i {
+    font-size: 50px;
+    color: #4260a0;
+    margin-bottom: 15px;
+}
+
+.ai-header h3 {
+    font-size: 28px;
+    color: #4260a0;
+    font-weight: 700;
+}
+
+.quick-symptoms {
+    margin-bottom: 25px;
+}
+
+.symptoms-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.symptom-tag {
+    background: #f0f0f0;
+    color: #333;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.symptom-tag:hover {
+    background: #4260a0;
+    color: white;
+}
+
+.symptom-tag.active {
+    background: #4260a0;
+    color: white;
+}
+
+.symptom-input {
+    width: 100%;
+    border: 2px solid #e0e0e0;
+    padding: 15px;
+    min-height: 120px;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.symptom-input:focus {
+    border-color: #4260a0;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(66,96,160,0.1);
+}
+
+.analyze-btn {
+    width: 100%;
+    background: #4260a0;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 20px 0;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.analyze-btn:hover {
+    background: #2c3e6b;
+    transform: translateY(-2px);
+}
+
+.analyze-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.spinner {
+    display: none;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #fff;
+    border-top: 3px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@keyframes spin {
+    0% { transform: translateY(-50%) rotate(0deg); }
+    100% { transform: translateY(-50%) rotate(360deg); }
+}
+
+.result-card {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-right: 5px solid #4260a0;
+    animation: slideUp 0.5s ease forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+@keyframes slideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.result-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.disease-name {
+    color: #4260a0;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.probability-badge {
+    background: #4260a0;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.probability-bar {
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    margin: 15px 0;
+    overflow: hidden;
+}
+
+.probability-fill {
+    height: 100%;
+    background: #4260a0;
+    border-radius: 4px;
+    transition: width 1s ease;
+}
+
+.description {
+    color: #666;
+    margin: 15px 0;
+    line-height: 1.6;
+}
+
+.treatment-box {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 15px;
+    border: 1px solid #e8e8e8;
+}
+
+.treatment-item {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.treatment-item i {
+    color: #4260a0;
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+.treatment-item strong {
+    color: #333;
+    min-width: 100px;
+}
+
+.treatment-item span {
+    color: #666;
+    flex: 1;
+}
+
+.error-message {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 12px 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    display: none;
+    border-right: 4px solid #dc3545;
+}
+
+.disclaimer {
+    background: #fff3cd;
+    color: #856404;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+    font-size: 14px;
+    border-right: 4px solid #ffc107;
+}
+
+@media (max-width: 768px) {
+    .ai-diagnosis-wrapper {
+        padding: 80px 20px 30px;
+    }
+    
+    .treatment-item {
+        flex-direction: column;
+    }
+    
+    .treatment-item strong {
+        margin-bottom: 5px;
+    }
+}

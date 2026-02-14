@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ar">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>التشخيص الذكي - المساعد الطبي</title>
+    <link rel="icon" href="../img/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/icofont.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/ai-diagnosis.css">
+</head>
+
+<body>
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader-outter"></div>
+            <div class="loader-inner"></div>
+            <div class="indicator">
+                <svg width="16px" height="12px">
+                    <polyline points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="header-inner">
+            <div class="logo d-flex align-items-center">
+                <div class="logo-img">
+                    <img src="../img/logo.png" alt="">
+                </div>
+                <p class="mb-0">المساعد الطبي</p>
+            </div>
+            <div class="main-menu">
+                <ul class="nav menu">
+                    <li><a href="../index.html">الرئيسية</a></li>
+                    <li><a href="login/login.html">تسجيل دخول</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="ai-diagnosis-wrapper">
+        <div class="ai-diagnosis-container">
+            <div class="ai-header">
+                <i class="icofont-stethoscope"></i>
+                <h3>التشخيص الذكي</h3>
+                <p>نظام تحليل الأعراض بالذكاء الاصطناعي من مصادر طبية موثوقة</p>
+            </div>
+
+            <div class="quick-symptoms">
+                <p class="mb-3">أعراض شائعة:</p>
+                <div class="symptoms-tags">
+                    <span class="symptom-tag" data-symptom="صداع">صداع</span>
+                    <span class="symptom-tag" data-symptom="حمى">حمى</span>
+                    <span class="symptom-tag" data-symptom="سعال">سعال</span>
+                    <span class="symptom-tag" data-symptom="إرهاق">إرهاق</span>
+                    <span class="symptom-tag" data-symptom="يرقان">يرقان</span>
+                    <span class="symptom-tag" data-symptom="اصفرار">اصفرار</span>
+                </div>
+            </div>
+
+            <textarea id="symptomInput" class="symptom-input" 
+                placeholder="اكتب الأعراض التي تشعر بها... مثال: يرقان، اصفرار العيون، بول داكن، تعب"></textarea>
+
+            <button class="analyze-btn" id="analyzeBtn">
+                <span class="btn-text">تحليل الأعراض</span>
+                <div class="spinner" id="loadingSpinner"></div>
+            </button>
+
+            <div class="error-message" id="errorMessage"></div>
+            <div id="resultsContainer"></div>
+
+            <div class="disclaimer">
+                <i class="icofont-info-circle"></i>
+                هذا التشخيص للاسترشاد فقط من مصادر: FDA، PubMed، ClinicalTrials.gov
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../js/ai-diagnosis.js"></script>
+</body>
+
+</html>

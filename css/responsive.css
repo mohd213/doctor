@@ -1,4 +1,13 @@
 /* Mobile and Tablet Screen */
+@media only screen and (max-width: 1200px) {
+    .page-content .right-side {
+        width: 280px;
+    }
+    .page-content .left-side {
+        width: 70%;
+    }
+}
+
 @media only screen and (max-width: 991px) {
     .content{
         height: auto;
@@ -11,5 +20,49 @@
     .white-side-login {
         width: 100%;
         padding: 30px;
+    }
+    .page-content {
+        flex-direction: column;
+    }
+    .page-content .right-side {
+        position: relative;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .page-content .left-side {
+        width: 100%;
+    }
+    .left-side-blogs {
+        flex-direction: column;
+        width: 100%;
+    }
+    .blogs, .other-blogs {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .header {
+        padding: 0 20px;
+    }
+    .header .header-inner .main-menu .nav {
+        gap: 20px;
+    }
+    .main-page .header-page {
+        flex-direction: column;
+    }
+    .main-page .header-page .title,
+    .main-page .header-page .img {
+        width: 100%;
+        border-radius: 0;
+    }
+    .main-page .join {
+        flex-direction: column;
+        height: auto;
+        padding: 30px;
+    }
+    .main-page .join .join-content,
+    .main-page .join .img {
+        width: 100%;
     }
 }

@@ -2,26 +2,16 @@
 <html lang="ar">
 
 <head>
-    <!-- Meta Tags -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="keywords" content="Site keywords here">
-    <meta name="description" content="">
-    <meta name='copyright' content=''>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Title -->
-    <title>المساعد الطبي</title>
-    <!-- Favicon -->
+    <title>إنشاء حساب - المساعد الطبي</title>
     <link rel="icon" href="../../img/logo.png">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../../css/bootstrap.min.css">
     <link rel="stylesheet" href="../../css/nice-select.css">
-    <!-- Medipro CSS -->
     <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
 </head>
 
 <body>
@@ -32,105 +22,62 @@
             <div class="loader-inner"></div>
             <div class="indicator">
                 <svg width="16px" height="12px">
-                    <polyline id="back" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
-                    <polyline id="front" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                    <polyline points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
                 </svg>
             </div>
         </div>
     </div>
-    <!-- End Preloader -->
 
-    <!-- login box -->
+    <!-- Register Box -->
     <div class="content">
         <div class="d-flex justify-content-start">
-            <!-- right side include information about website and logo -->
             <div class="blue-side-login">
                 <p><img src="../../img/logo.png" alt="logo"> المساعد الطبي</p>
-                <span>منصة طبية عربية تُعنى بتقديم المحتوى الطبي الموثوق، بأقلام آلاف الأطباء
-                    المعتمدين، بالإضافة لإمكانية الطبيب بتسجيل الحالات المرضية الخاصة به ومتابعة الحالات.</span>
+                <span>منصة طبية عربية تُعنى بتقديم المحتوى الطبي الموثوق</span>
             </div>
-            <!-- left side include register form -->
             <div class="white-side-login">
-                <h3 class="title mb-5">تسجيل الأطباء على منصة المساعد الطبي</h3>
-                <form class="form" method="post" action="">
+                <h3 class="title mb-5">تسجيل الأطباء</h3>
+                <form class="form" method="post" action="#" id="registerForm">
                     <div class="row">
                         <div class="col-lg-6">
-                            <div class="form-group">
-                                <input type="text" name="first-name" placeholder="الاسم الأول "
-                                    required="required">
-                            </div>
+                            <input type="text" name="first-name" placeholder="الاسم الأول" required>
                         </div>
                         <div class="col-lg-6">
-                            <div class="form-group">
-                                <input type="text" name="last-name" placeholder=" الاسم الأخير "
-                                    required="required">
-                            </div>
+                            <input type="text" name="last-name" placeholder="الاسم الأخير" required>
                         </div>
                         <div class="col-12">
-                            <div class="form-group">
-                                <input type="email" name="email" placeholder="البريد الإلكتروني" required="required">
-                            </div>
+                            <input type="email" name="email" placeholder="البريد الإلكتروني" required>
                         </div>
                         <div class="col-12">
-                            <div class="form-group">
-                                <input type="password" name="password" placeholder="كلمة المرور" required="required">
-                            </div>
+                            <input type="password" name="password" id="password" placeholder="كلمة المرور" required>
                         </div>
                         <div class="col-12">
-                            <div class="form-group">
-                                <input type="password" name="password" placeholder="تأكيد كلمة المرور" required="required">
-                            </div>
+                            <input type="password" name="confirm-password" id="confirmPassword" placeholder="تأكيد كلمة المرور" required>
                         </div>
                         <div class="col-lg-6">
-                            <div class="form-group">
-                                <input type="tel" name="tel" placeholder="رقم الموبايل" pattern="" required="required">
-                            </div>
+                            <input type="tel" name="tel" placeholder="رقم الموبايل" required>
                         </div>
                         <div class="col-lg-6">
-                            <div class="form-group">
-                                <div class="nice-select form-control wide" tabindex="0"><span
-                                        class="current">القسم</span>
-                                    <ul class="list">
-                                        <li data-value="1" class="option selected ">القسم</li>
-                                        <li data-value="2" class="option">الأنف والاذن والحنجرة</li>
-                                        <li data-value="3" class="option">الجلدية والتناسلية</li>
-                                        <li data-value="4" class="option">الطب النفسي</li>
-                                        <li data-value="4" class="option">الغدد الصماء</li>
-                                        <li data-value="4" class="option">القلب والاوعية الدموية</li>
-                                        <li data-value="4" class="option">الكلى</li>
-                                        <li data-value="4" class="option">الجهاز الهضمي والكبد</li>
-                                    </ul>
-                                </div>
-                            </div>
+                            <select name="department" class="wide">
+                                <option value="">القسم</option>
+                                <option value="الأنف والاذن">الأنف والاذن والحنجرة</option>
+                                <option value="الجلدية">الجلدية والتناسلية</option>
+                                <option value="الطب النفسي">الطب النفسي</option>
+                            </select>
                         </div>
-                        <div class="col-12 d-flex mt-3">
-                            <div style="position: relative; margin-left: 10px;">
-                                <div class="cbx">
-                                    <input id="cbx" type="checkbox" />
-                                    <label for="cbx"></label>
-                                    <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
-                                        <path d="M2 8.36364L6.23077 12L13 2"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <p>أوافق على شروط الخصوصية والاستخدام</p>
-                        </div>
-
                     </div>
                     <div class="form-group login-btn">
-                        <button class="btn login" type="submit">تسجيل</button>
+                        <button class="btn" type="submit">تسجيل</button>
                     </div>
-                </form>   
+                </form>
+                <p>لديك حساب؟ <a href="login.html">تسجيل الدخول</a></p>
             </div>
         </div>
     </div>
-    <!-- End login box -->
-    <!-- jquery Min JS -->
+
     <script src="../../js/jquery.min.js"></script>
     <script src="../../js/bootstrap.min.js"></script>
     <script src="../../js/niceselect.js"></script>
-    <!-- Main JS -->
     <script src="../../js/main.js"></script>
 </body>
-
 </html>
