@@ -2,21 +2,98 @@
 <html lang="ar">
 
 <head>
+    <!-- Meta Tags -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="المساعد الطبي, تشخيص طبي, صحة, مقالات طبية">
+    <meta name="description" content="المساعد الطبي - منصة طبية عربية للتشخيص الذكي والمحتوى الطبي الموثوق">
+    <meta name='copyright' content='المساعد الطبي'>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="المساعد الطبي - منصة طبية عربية">
+    <!-- Title -->
     <title>المساعد الطبي - الرئيسية</title>
-    <link rel="icon" href="img/logo.png">
+    <!-- Favicon -->
+    <link rel="icon" href="./img/logo.png">
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/icofont.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/aos.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/icofont.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/aos.css">
+    <!-- Medipro CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <style>
+        /* تنسيق إضافي لتوحيد أطوال البطاقات */
+        .service-card {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s ease;
+            border: 1px solid #eee;
+        }
+        
+        .service-card .card-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .service-card p {
+            flex: 1;
+            margin-bottom: 20px;
+        }
+        
+        .service-card .btn {
+            align-self: center;
+            margin-top: auto;
+        }
+        
+        /* تنسيق البطاقة الوسطى */
+        .service-card.highlight-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            transform: scale(1.05);
+            border: none;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+        
+        .service-card.highlight-card i,
+        .service-card.highlight-card h5,
+        .service-card.highlight-card p {
+            color: white;
+        }
+        
+        .service-card.highlight-card .btn {
+            background: white;
+            color: #667eea;
+            border: none;
+            font-weight: bold;
+        }
+        
+        .service-card.highlight-card .btn:hover {
+            background: #f8f9fa;
+            transform: translateY(-2px);
+        }
+        
+        .service-card:not(.highlight-card):hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        /* تحسين تنسيق الصف */
+        .row.equal-height {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .row.equal-height > [class*='col-'] {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
 </head>
 
 <body>
@@ -27,33 +104,41 @@
             <div class="loader-inner"></div>
             <div class="indicator">
                 <svg width="16px" height="12px">
-                    <polyline points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                    <polyline id="back" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                    <polyline id="front" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
                 </svg>
             </div>
         </div>
     </div>
-
-    <!-- Header -->
+    <!-- End Preloader -->
+    
+    <!-- Header Area -->
     <header class="header">
+        <!-- Header Inner -->
         <div class="header-inner">
-            <div class="logo d-flex align-items-center">
+            <div class="logo d-flex align-items-center justify-content-start">
                 <div class="logo-img">
-                    <img src="img/logo.png" alt="شعار المساعد الطبي">
+                    <img src="./img/logo.png" alt="شعار المساعد الطبي">
                 </div>
-                <p class="mb-0">المساعد الطبي</p>
+                <p class="mb-0">
+                    المساعد الطبي
+                </p>
             </div>
             <div class="main-menu">
                 <ul class="nav menu">
                     <li><a href="index.html" class="active">الرئيسية</a></li>
-                    <li><a href="html/login/login.html">تسجيل الدخول</a></li>
-                    <li><a href="html/ai-diagnosis.html">التشخيص الذكي</a></li>
+                    <li><a href="./html/login/login.html"><i class="icofont-ui-user ml-3"></i> تسجيل دخول</a></li>
+                    <li><a href="./html/ai-diagnosis.html">التشخيص الذكي</a></li>
                 </ul>
             </div>
         </div>
+        <!--/ End Header Inner -->
     </header>
-
-    <!-- Main Content -->
+    <!-- End Header Area -->
+    
+    <!-- page content -->
     <div class="main-page">
+        <!-- Hero Section -->
         <div class="header-page">
             <div class="title" data-aos="fade-left">
                 <h1>المساعد الطبي</h1>
@@ -62,24 +147,134 @@
             <div class="img" data-aos="fade-right"></div>
         </div>
 
+        <!-- Services Section -->
         <div class="section text-center">
             <div class="section-header mb-5" data-aos="fade-up">
                 <p>مرحباً بك في منصتنا الطبية</p>
                 <h3>خدماتنا المميزة</h3>
             </div>
-            <div class="row">
+            <div class="row equal-height">
+                <!-- بطاقة استشارات طبية -->
                 <div class="col-lg-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
                     <div class="service-card p-4 bg-white rounded shadow-sm">
-                        <i class="icofont-stethoscope fa-3x text-primary mb-3"></i>
-                        <h5>تشخيص ذكي</h5>
-                        <p>نظام تشخيص بالذكاء الاصطناعي من مصادر طبية موثوقة</p>
-                        <a href="html/ai-diagnosis.html" class="btn btn-primary mt-3">جرب الآن</a>
+                        <div class="card-content">
+                            <i class="icofont-doctor fa-3x text-primary mb-3"></i>
+                            <h5>استشارات طبية</h5>
+                            <p class="text-muted">تواصل مع أطباء متخصصين في مختلف المجالات للحصول على استشارة سريعة وموثوقة</p>
+                            <a href="./html/login/login.html" class="btn btn-primary mt-3">استشر الآن</a>
+                        </div>
                     </div>
                 </div>
-                <!-- المزيد من البطاقات -->
+                
+                <!-- بطاقة التشخيص الذكي في المنتصف بلون مختلف -->
+                <div class="col-lg-4 mb-4" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="service-card highlight-card p-4 rounded shadow-sm">
+                        <div class="card-content">
+                            <i class="icofont-stethoscope fa-3x mb-3"></i>
+                            <h5>التشخيص الذكي</h5>
+                            <p>نظام تشخيص متطور بالذكاء الاصطناعي يعتمد على أحدث المصادر الطبية الموثوقة والدراسات العلمية</p>
+                            <a href="./html/ai-diagnosis.html" class="btn mt-3">جرب التشخيص الآن</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- بطاقة محتوى طبي -->
+                <div class="col-lg-4 mb-4" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="service-card p-4 bg-white rounded shadow-sm">
+                        <div class="card-content">
+                            <i class="icofont-prescription fa-3x text-primary mb-3"></i>
+                            <h5>محتوى طبي</h5>
+                            <p class="text-muted">مقالات ومحتوى طبي موثق من نخبة الأطباء والاستشاريين في مختلف التخصصات</p>
+                            <a href="#articles" class="btn btn-primary mt-3">اقرأ المزيد</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Articles Section -->
+        <div class="articels section" id="articles">
+            <div class="section-header" data-aos="fade-up">
+                <p>محتوى طبي موثوق من أطباء</p>
+                <h3>مقالات طبية</h3>
+            </div>
+            <div class="articals-cards mt-5">
+                <div class="row">
+                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="artical-card">
+                            <div class="img">
+                                <img src="./img/img1.jpg" alt="أمراض اللثة">
+                            </div>
+                            <div class="artical-body">
+                                <a href="#">
+                                    <h5>أمراض اللثة</h5>
+                                </a>
+                                <p class="text-muted small">تعرف على أسباب وأعراض وعلاج أمراض اللثة</p>
+                            </div>
+                            <div class="artical-footer">
+                                <div class="time d-flex align-items-center justify-content-start">
+                                    <i class="icofont-calendar"></i>
+                                    <span>20 أغسطس 2022</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="artical-card">
+                            <div class="img">
+                                <img src="./img/img2.jpg" alt="حبوب الوجه">
+                            </div>
+                            <div class="artical-body">
+                                <a href="#">
+                                    <h5>حبوب الوجه</h5>
+                                </a>
+                                <p class="text-muted small">أسباب ظهور حب الشباب وطرق العلاج والوقاية</p>
+                            </div>
+                            <div class="artical-footer">
+                                <div class="time d-flex align-items-center justify-content-start">
+                                    <i class="icofont-calendar"></i>
+                                    <span>17 ديسمبر 2022</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="artical-card">
+                            <div class="img">
+                                <img src="./img/img3.jpg" alt="فقر الدم">
+                            </div>
+                            <div class="artical-body">
+                                <a href="#">
+                                    <h5>فقر الدم</h5>
+                                </a>
+                                <p class="text-muted small">كل ما تريد معرفته عن فقر الدم وأعراضه وعلاجه</p>
+                            </div>
+                            <div class="artical-footer">
+                                <div class="time d-flex align-items-center justify-content-start">
+                                    <i class="icofont-calendar"></i>
+                                    <span>08 آب 2022</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Join Section -->
+        <div class="join d-flex align-items-center justify-content-space-between my-5" data-aos="fade-up">
+            <div class="join-content">
+                <h2>هل أنت طبيب؟</h2>
+                <h3>إنضم الآن</h3>
+                <p>إذا كنت ترغب في الانضمام لمجتمع المساعد الطبي والاستفادة من الخدمات العديدة التي يوفرها الطبي للأطباء.. لا تتردد وابدأ الآن بتسجيل الاشتراك</p>
+                <a href="./html/login/register.html"><button class="btn">سجل الآن</button></a>
+            </div>
+            <div class="img">
+                <img src="./img/doctor.webp" alt="انضم كطبيب">
             </div>
         </div>
     </div>
+    <!-- End page content -->
 
     <!-- Footer -->
     <footer class="bg-dark text-white text-center py-4">
@@ -87,11 +282,12 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/aos.js"></script>
-    <script src="js/main.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/aos.js"></script>
+    <!-- Main JS -->
+    <script src="./js/main.js"></script>
     <script>
         AOS.init({
             duration: 800,
@@ -99,4 +295,5 @@
         });
     </script>
 </body>
+
 </html>
